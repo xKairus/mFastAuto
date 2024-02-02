@@ -1,0 +1,51 @@
+@font-face {
+  font-family: JosefinSans;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/JosefinSans-Regular.woff2) format("woff2"),
+    url(../fonts/JosefinSans-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: HelveticaNeue;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/HelveticaNeue-Regular.woff2) format("woff2"),
+    url(../fonts/HelveticaNeue-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/Roboto-Regular.woff2) format("woff2"),
+    url(../fonts/Roboto-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/Roboto-Medium.woff2) format("woff2"),
+    url(../fonts/Roboto-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: FuturaPT;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/FuturaPT-Regular.woff2) format("woff2"),
+    url(../fonts/FuturaPT-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: FuturaPT;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/FuturaPT-Medium.woff2) format("woff2"),
+    url(../fonts/FuturaPT-Medium.woff) format("woff");
+}

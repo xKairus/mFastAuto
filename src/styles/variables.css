@@ -1,0 +1,17 @@
+:root {
+  --color-bg-main: #ffffff;
+  --color-bg-secondary: #dbebf8;
+
+  --color-typo-main: #1e266d;
+  --color-typo-secondary: #445781;
+  --color-typo-bright: #ffffff;
+
+  --color-link: #1e266d;
+  --color-link-hover: #777777;
+  --color-link-active: #377ef9;
+
+  --color-btn: #377ef9;
+  --color-btn-text: #ffffff;
+
+  --color-accent: #377ef9;
+}
