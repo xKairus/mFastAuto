@@ -1,0 +1,7 @@
+.lead {
+  min-height: 57.5rem;
+  background-image: url(./../../assets/lead-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
