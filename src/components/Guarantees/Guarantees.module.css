@@ -1,0 +1,29 @@
+.guarantees {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./../../assets/auto-service-4.jpg");
+  min-height: 40rem;
+  padding: 7.5rem;
+  box-sizing: border-box;
+}
+
+.info {
+  max-width: 39.4rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.models {
+  margin: 5rem auto 0;
+  max-width: 65rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.models img {
+  transition: opacity 0.4s;
+}
+
+.models img:hover {
+  opacity: 0.5;
+}
