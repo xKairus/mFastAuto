@@ -2,9 +2,18 @@
   color: var(--color-typo-main);
   font-family: "Josefin Sans", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 3.75rem;
+  font-size: 2.6rem;
   margin: 1.5rem 0;
+  line-height: 3.4rem;
+}
+
+.big {
+  font-size: 3.75rem;
   line-height: 4.4rem;
+}
+
+.inverse {
+  color: var(--color-typo-bright);
 }
 
 .text {

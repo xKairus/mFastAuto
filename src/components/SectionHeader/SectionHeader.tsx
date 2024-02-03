@@ -1,10 +1,25 @@
-import styles from './SectionHeader.module.css';
+import styles from "./SectionHeader.module.css";
 
-export default function SectionHeader() {
+interface SHProps {
+  title: string;
+  text?: string;
+  size?: string;
+}
+
+export const SectionHeader = ({ title, text, size = "" }: SHProps) => {
   return (
     <>
-      <h2 className={styles.title}>AUTO REPAIR AND COLLISION CENTER</h2>
-      <p className={styles.text}>Reliable and knowledgeable mechanics located in Los Angeles, CA</p>
+      <h2 className={`${styles.title} ${styles[size]}`}>{title}</h2>
+      <p className={styles.text}>{text}</p>
     </>
   );
-}
+};
+
+export const SectionHeaderInverse = ({ title, text, }: SHProps) => {
+  return (
+    <>
+      <p className={`${styles.text} ${styles.inverse}`}>{text}</p>
+      <h2 className={`${styles.title} ${styles.inverse}`}>{title}</h2>
+    </>
+  );
+};
