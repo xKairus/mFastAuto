@@ -3,7 +3,7 @@
   font-family: "Josefin Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 2.6rem;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0;
   line-height: 3.4rem;
 }
 
@@ -17,9 +17,11 @@
 }
 
 .text {
-    color: var(--color-typo-secondary);
-    font-family: "Helvetica Neue", "Arial", sans-serif;
-    margin: 1.5rem 0;
-    font-size: 1.1rem;
-    font-weight: 400;
+  color: var(--color-typo-secondary);
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  margin: 1.5rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 40rem;
+  line-height: 1.7rem;
 }
