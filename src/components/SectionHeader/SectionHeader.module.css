@@ -1,7 +1,7 @@
 .title {
   margin: 0 0 1.5rem 0;
   font-size: 2.6rem;
-  font-family: "Josefin Sans", "Arial", sans-serif;
+  font-family: JosefinSans, "Arial", sans-serif;
   font-weight: 400;
   line-height: 3.4rem;
   color: var(--color-typo-main);
@@ -21,7 +21,7 @@
   max-width: 40rem;
   margin: 0 0 1.5rem 0;
   font-size: 1.1rem;
-  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-family: HelveticaNeue, "Arial", sans-serif;
   font-weight: 400;
   line-height: 1.7rem;
   color: var(--color-typo-secondary);
