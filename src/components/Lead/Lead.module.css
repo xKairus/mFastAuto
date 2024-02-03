@@ -3,15 +3,16 @@
   background-image: url(./../../assets/lead-bg.jpg);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
+  background-size: 100%;
   padding: 15.5rem 0;
 }
 
 .container {
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
 .info {
   max-width: 38rem;
+  margin-bottom: 3.75rem;
 }
