@@ -25,10 +25,28 @@
   border: 1px solid #ccc;
   margin: -1px -1px 0 0;
   gap: 2.5rem;
+  position: relative;
+  isolation: isolate;
+  transition: transform 450ms ease;
 }
 
 .card:hover {
+  transform: translateY(-1.5rem);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
   border-bottom: 5px solid var(--color-accent);
+  scale: 0 1;
+  transition: scale 450ms;
+}
+
+.card:hover::after {
+  border-bottom: 5px solid var(--color-accent);
+  scale: 1 1;
 }
 
 .card span {
