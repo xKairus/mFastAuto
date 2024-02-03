@@ -1,0 +1,29 @@
+.pro {
+  padding: 6.25rem 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 8.5rem;
+}
+
+.img {
+  background-image: url("./../../assets/auto-service5.jpg");
+  background-repeat: no-repeat;
+  width: 35.6rem;
+  height: 41.25rem;
+}
+
+.info {
+    max-width: 32rem;
+}
+
+.info h2{
+    margin-top: 8rem;
+    margin-bottom: 2.5rem;
+}
+
+.info p{
+    margin-bottom: 4rem;
+}
