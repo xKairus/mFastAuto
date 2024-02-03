@@ -1,0 +1,21 @@
+.button {
+    cursor: pointer;
+    padding: 1.2rem 2.2rem;
+    background-color: var(--color-btn);
+    border: 1px solid var(--color-btn);
+    font-size: 1rem;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1rem;
+    color: var(--color-btn-text);
+}
+.button:hover {
+    background-color: var(--color-btn-active);
+    border: 1px solid var(--color-btn-active);
+    color: var(--color-btn-text);
+}
+
+.inverse {
+    background-color: var(--color-btn-text);
+    color: var(--color-btn);
+}

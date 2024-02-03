@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import styles from "./Lead.module.css";
 
@@ -8,6 +9,7 @@ export default function Lead() {
         <div className={styles.info}>
           <SectionHeader />
         </div>
+        <Button newClass={'inverse'}>Get A Quote</Button>
       </div>
     </section>
   );
