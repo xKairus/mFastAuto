@@ -1,3 +1,4 @@
+import Experience from "./components/Experience/Experience";
 import Lead from "./components/Lead/Lead";
 import Service from "./components/Service/Service";
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <Lead />
       <Service />
+      <Experience />
     </>
   );
 }

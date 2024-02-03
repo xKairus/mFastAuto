@@ -1,3 +1,8 @@
+import oilIcon from "./../assets/oil-icon.png";
+import wheelIcon from "./../assets/wheel-icon.png";
+import engineIcon from "./../assets/engine-icon.png";
+import wrenchIcon from "./../assets/wrench-icon.png";
+
 export const sectionHeaders = {
   lead: {
     title: "AUTO REPAIR AND COLLISION CENTER",
@@ -32,3 +37,26 @@ export const sectionHeaders = {
       "For any additional questions regarding M Fast Auto and our our services, feel free to contact us",
   },
 };
+
+export const expCards = [
+  {
+    icon: oilIcon,
+    title: "Oil & Lubricants",
+    text: "On average, vehicles are estimated to need an oil change every 3,000 miles or every six months.",
+  },
+  {
+    icon: wheelIcon,
+    title: "Wheel Alignment",
+    text: "Most car experts recommend scheduling an alignment every other oil change, or approximately every 6,000 miles.",
+  },
+  {
+    icon: engineIcon,
+    title: "Transmission Repair",
+    text: "Depending on what the manufacturer recommends, you may need to get a transmission flush every 30,000 miles or two years.",
+  },
+  {
+    icon: wrenchIcon,
+    title: "Vehicle Maintenance",
+    text: "At the least, you should have your car inspected by a qualified mechanic every 12 months to look for problems.",
+  },
+];
