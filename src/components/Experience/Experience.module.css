@@ -1,3 +1,7 @@
+.experience {
+margin-top: 4rem;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -7,6 +11,7 @@
 
 .info {
   max-width: 31.5rem;
+  margin-top: 10rem;
 }
 
 .cards {
@@ -19,7 +24,11 @@
 .card {
   box-sizing: border-box;
   padding: 2.5rem 2.2rem;
-  background-color: red;
+  box-shadow: 0 0 3rem #cccccc7e;
+}
+
+.card:hover {
+  box-shadow: 0 0 3rem #cccccc;
 }
 
 .card1 {
