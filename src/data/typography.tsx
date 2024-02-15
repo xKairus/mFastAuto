@@ -60,3 +60,101 @@ export const expCards = [
     text: "At the least, you should have your car inspected by a qualified mechanic every 12 months to look for problems.",
   },
 ];
+
+export const repairServices = [
+  {
+    title: "Labor rate per hour",
+    price: "$80.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "AC & Heating System",
+    price: "$120.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Transmission Repair",
+    price: "$149.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Catalytic Convertor Replacement",
+    price: "$699.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Timing Belt Kit Replacement",
+    price: "$499.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Battery Replacement",
+    price: "$140.00",
+  },
+];
+
+export const preventiveMaintenance = [
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Oil Change Domestic Cars",
+    price: "$45.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Oil Change Foreign Cars",
+    price: "$74.99",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "AC Recharge Freon",
+    price: "$120.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Brakes Replacement",
+    price: "$150.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Radiator Service",
+    price: "$69.99",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Tire Replacement",
+    price: "$75.00",
+  },
+];
+
+export const bodyWork = [
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Fender Replacement Starting",
+    price: "$499.99",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Dent Repair without Paint",
+    price: "$150.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Automatic transmission",
+    price: "$70.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Bumper Replacement",
+    price: "$599.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Windshield Replacement",
+    price: "$499.00",
+  },
+  {
+    desc: "Starting Price and varies per make and model.",
+    title: "Window Regulator",
+    price: "$300.00",
+  },
+];

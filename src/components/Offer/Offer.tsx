@@ -1,6 +1,7 @@
 import styles from "./Offer.module.css";
 import { sectionHeaders } from "./../../data/typography.tsx";
 import { SectionHeader } from "../SectionHeader/SectionHeader";
+import PriceList from "../PriceList/PriceList.tsx";
 
 export default function Offer() {
   return (
@@ -13,13 +14,7 @@ export default function Offer() {
           <li>Body Work</li>
         </ul>
       </div>
-      <div>
-        <div>
-          <span>Labor rate per hour</span>
-          <span></span>
-          <span>$80.00</span>
-        </div>
-      </div>
+      <PriceList />
     </section>
   );
 }
