@@ -1,13 +1,22 @@
 import styles from "./PriceList.module.css";
 
-export default function PriceList() {
+interface PLProps {
+  title: string;
+  price: string;
+  desc?: string;
+}
+
+const PriceList: React.FC<PLProps> = ({ title, price, desc }) => {
   return (
     <div>
       <div>
-        <span>Labor rate per hour</span>
+        <span>{title}</span>
         <span></span>
-        <span>$80.00</span>
+        <span>{price}</span>
+        <span>{desc}</span>
       </div>
     </div>
   );
-}
+};
+
+export default PriceList;
