@@ -18,22 +18,18 @@ interface Service {
 export default function Offer() {
   const [selectedOffer, setSelectedOffer] = useState<Service[]>(repairServices);
 
-  const handleItemClick = (serviceData: Service[]) => {
-    setSelectedOffer(serviceData);
-  };
-
   return (
     <section className={styles.offer}>
       <SectionHeader {...sectionHeaders.offer} />
       <div>
         <ul>
-          <li onClick={() => handleItemClick(repairServices)}>
+          <li onClick={() => setSelectedOffer(repairServices)}>
             Repair Services
           </li>
-          <li onClick={() => handleItemClick(preventiveMaintenance)}>
+          <li onClick={() => setSelectedOffer(preventiveMaintenance)}>
             Preventive Maintenance
           </li>
-          <li onClick={() => handleItemClick(bodyWork)}>Body Work</li>
+          <li onClick={() => setSelectedOffer(bodyWork)}>Body Work</li>
         </ul>
       </div>
       {selectedOffer.map((service, index) => (

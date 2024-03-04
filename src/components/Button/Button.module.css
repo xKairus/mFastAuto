@@ -1,13 +1,14 @@
 .button {
+  --clr-btn: var(--clr-btn-base);
   cursor: pointer;
-  padding: 1.2rem 2.2rem;
-  background-color: var(--color-btn);
-  border: 1px solid var(--color-btn);
-  font-size: 1rem;
-  font-family: Roboto, "Arial", sans-serif;
+  padding: 19.2px 35.2px;
+  background-color: var(--clr-btn);
+  border: 0.0625rem solid var(--clr-btn);
+  font-size: var(--fs-smaller);
+  font-family: var(--ff-forth);
   font-weight: 400;
   line-height: 1rem;
-  color: var(--color-btn-text);
+  color: var(--clr-btn-text);
 
   position: relative;
   isolation: isolate;
@@ -17,7 +18,7 @@
   content: "";
   position: absolute;
   z-index: -1;
-  background-color: var(--color-btn-active);
+  background-color: color-mix(in srgb, var(--clr-btn) 80%, black);
   inset: 0;
   scale: 0 1;
   transform-origin: right;
@@ -29,12 +30,17 @@
   scale: 1 1;
 }
 
+.button:active::after {
+  background-color: color-mix(in srgb, var(--clr-btn) 70%, black);
+
+}
+
 .inverse {
-  background-color: var(--color-btn-text);
-  color: var(--color-btn);
+  background-color: var(--clr-btn-text);
+  color: var(--clr-btn);
   transition: color 350ms;
 }
 
 .inverse:hover {
-  color: var(--color-btn-text);
+  color: var(--clr-btn-text);
 }

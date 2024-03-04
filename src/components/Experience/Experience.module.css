@@ -29,8 +29,8 @@
 
 .card h3 {
   margin: 1rem 0;
-  font-size: 1.375rem;
-  font-family: FuturaPT, "Josefin Sans", "Arial", serif;
+  font-size: var(--fs-h4);
+  font-family: var(--ff-third);
   font-weight: 400;
   line-height: 1.79rem;
   color: var(--color-typo-main);
@@ -38,8 +38,8 @@
 
 .card p {
   margin: 1rem 0;
-  font-size: 1rem;
-  font-family: Roboto, "Arial", serif;
+  font-size: var(--fs-smaller);
+  font-family: var(--ff-forth);
   font-weight: 400;
   line-height: 1.5rem;
   color: var(--color-typo-secondary);
@@ -78,8 +78,8 @@
 
 .item {
   margin-bottom: 1rem;
-  font-size: 1.125rem;
-  font-family: Roboto, "Arial", serif;
+  font-size: var(--fs-base);
+  font-family: var(--ff-forth);
   line-height: 1.5rem;
   color: var(--color-typo-main);
 }

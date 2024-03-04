@@ -1,5 +1,5 @@
 @font-face {
-  font-family: JosefinSans;
+  font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -7,7 +7,7 @@
     url(../fonts/JosefinSans-Regular.woff) format("woff");
 }
 @font-face {
-  font-family: HelveticaNeue;
+  font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -15,7 +15,7 @@
     url(../fonts/HelveticaNeue-Regular.woff) format("woff");
 }
 @font-face {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -33,7 +33,7 @@
 }
 
 @font-face {
-  font-family: FuturaPT;
+  font-family: "FuturaPT";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -42,7 +42,7 @@
 }
 
 @font-face {
-  font-family: FuturaPT;
+  font-family: "FuturaPT";
   font-style: normal;
   font-weight: 500;
   font-display: swap;

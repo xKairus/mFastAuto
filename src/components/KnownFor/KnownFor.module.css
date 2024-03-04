@@ -39,19 +39,19 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  border-bottom: 5px solid var(--color-accent);
+  border-bottom: 5px solid var(--clr-acc-base);
   scale: 0 1;
   transition: scale 450ms;
 }
 
 .card:hover::after {
-  border-bottom: 5px solid var(--color-accent);
+  border-bottom: 5px solid var(--clr-acc-base);
   scale: 1 1;
 }
 
 .card span {
-  font-size: 1.25rem;
-  font-family: JosefinSans, "Arial", sans-serif;
+  font-size: var(--fs-bigger);
+  font-family: var(--ff-second);
   font-weight: 400;
   line-height: 1.6rem;
   color: var(--color-typo-secondary);

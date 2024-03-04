@@ -1,32 +1,32 @@
 .title {
   margin: 0 0 1.5rem 0;
-  font-size: 2.6rem;
-  font-family: JosefinSans, "Arial", sans-serif;
+  font-size: var(--fs-h2);
+  font-family: var(--ff-second);
   font-weight: 400;
   line-height: 3.4rem;
-  color: var(--color-typo-main);
+  color: var(--clr-tp-base);
 }
 
 .big {
-  font-size: 3.75rem;
+  font-size: var(--fs-h1);
   line-height: 4.4rem;
 }
 
 .small {
-  font-size: 2.1rem;
+  font-size: var(--fs-h3);
   line-height: 2.75rem;
 }
 
 .text {
   max-width: 40rem;
   margin: 0 0 1.5rem 0;
-  font-size: 1.1rem;
-  font-family: HelveticaNeue, "Arial", sans-serif;
+  font-size: var(--fs-base);
+  font-family: var(--ff-base);
   font-weight: 400;
   line-height: 1.7rem;
-  color: var(--color-typo-secondary);
+  color: var(--clr-tp-second);
 }
 
 .inverse {
-  color: var(--color-typo-bright);
+  color: var(--clr-tp-third);
 }
