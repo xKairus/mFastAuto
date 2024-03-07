@@ -5,7 +5,7 @@ import styles from "./Lead.module.css";
 
 export default function Lead() {
   return (
-    <section className={styles.lead}>
+    <section className={styles.lead} id="Home">
       <div className={styles.container}>
         <div className={styles.info}>
           <SectionHeader {...sectionHeaders.lead} size="big" />

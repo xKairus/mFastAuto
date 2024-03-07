@@ -16,34 +16,36 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
-  
+
   align-items: center;
 }
 
 .faq {
   color: var(--clr-tp-third);
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
 }
 
 details {
-    box-sizing: border-box;
-    padding: 1.6875rem 2.1875rem;
-    background-color: hsla(0, 0%, 100%, 0.25);
-    border: 1px solid var(--clr-brd-base);
-    margin-top: 1.375rem;
+  box-sizing: border-box;
+  padding: 1.6875rem 2.1875rem;
+  background-color: hsla(0, 0%, 100%, 0.25);
+  border: 1px solid var(--clr-brd-base);
 
-    summary {
-        font-family: var(--ff-third);
-        font-size: 1.1rem;
-        line-height: 1.38rem;
-        letter-spacing: -0.17px;
-    }
+  summary {
+    font-family: var(--ff-third);
+    font-size: 1.1rem;
+    line-height: 1.38rem;
+    letter-spacing: -0.17px;
+  }
 
-    p {
-        margin: 1.75rem 0 0;
-        font-family: var(--ff-forth);
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
+  p {
+    margin: 1.75rem 0 0;
+    font-family: var(--ff-forth);
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
 }
 
 .formWrapper {

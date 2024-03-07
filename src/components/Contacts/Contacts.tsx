@@ -5,7 +5,7 @@ import styles from "./Contacts.module.css"
 
 export default function Contacts() {
   return (
-    <section className={styles.contacts}>
+    <section className={styles.contacts} id="Contact">
       <div className={styles.title}>
         <SectionHeaderInverse {...sectionHeaders.contact} />
       </div>

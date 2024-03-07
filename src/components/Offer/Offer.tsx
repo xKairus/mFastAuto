@@ -25,7 +25,7 @@ export default function Offer() {
   }
 
   return (
-    <section className={styles.offer}>
+    <section className={styles.offer} id="Pricing">
       <SectionHeader {...sectionHeaders.offer} />
       <div>
         <ul className={styles.services}>
