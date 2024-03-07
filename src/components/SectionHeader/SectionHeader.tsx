@@ -18,7 +18,7 @@ export const SectionHeader = ({ title, text, size = "" }: SHProps) => {
 export const SectionHeaderInverse = ({ title, text, }: SHProps) => {
   return (
     <>
-      <p className={`${styles.text} ${styles.inverse}`}>{text}</p>
+      {text && <p className={`${styles.text} ${styles.inverse}`}>{text}</p>}
       <h2 className={`${styles.title} ${styles.inverse}`}>{title}</h2>
     </>
   );

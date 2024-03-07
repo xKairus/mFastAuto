@@ -1,0 +1,91 @@
+.contacts {
+  box-sizing: border-box;
+  padding: 7.5rem 0;
+  background-image: url("./../../assets/home_auto_service_contact_bg4.jpg");
+}
+
+.title {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 78rem;
+}
+
+.container {
+  margin: 4.6875rem auto 0;
+  max-width: 78rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  
+  align-items: center;
+}
+
+.faq {
+  color: var(--clr-tp-third);
+}
+
+details {
+    box-sizing: border-box;
+    padding: 1.6875rem 2.1875rem;
+    background-color: hsla(0, 0%, 100%, 0.25);
+    border: 1px solid var(--clr-brd-base);
+    margin-top: 1.375rem;
+
+    summary {
+        font-family: var(--ff-third);
+        font-size: 1.1rem;
+        line-height: 1.38rem;
+        letter-spacing: -0.17px;
+    }
+
+    p {
+        margin: 1.75rem 0 0;
+        font-family: var(--ff-forth);
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+}
+
+.formWrapper {
+  box-sizing: border-box;
+  background-color: var(--clr-bg-base);
+  padding: 3.5rem 5rem;
+  height: fit-content;
+}
+
+.form {
+  display: flex;
+  gap: 0.6125rem;
+  flex-direction: column;
+  align-items: center;
+
+  input {
+    width: 100%;
+    min-height: 3.5rem;
+    background-color: var(--clr-bg-second);
+    border: 1px solid var(--clr-brd-base);
+  }
+}
+
+.formText {
+  text-align: center;
+
+  h3 {
+    margin: 1rem 0;
+    font-size: 1.5625rem;
+    font-family: var(--ff-third);
+    font-weight: 400;
+    line-height: 1.95rem;
+
+    color: var(--clr-tp-base);
+  }
+
+  p {
+    margin: 1.25rem 0 2.5rem;
+    font-size: 0.9375rem;
+    font-family: var(--ff-forth);
+    font-weight: 400;
+    line-height: 1.4rem;
+    color: var(--clr-tp-second);
+  }
+}
