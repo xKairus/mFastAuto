@@ -1,7 +1,7 @@
-import oilIcon from "./../assets/oil-icon.png";
-import wheelIcon from "./../assets/wheel-icon.png";
-import engineIcon from "./../assets/engine-icon.png";
-import wrenchIcon from "./../assets/wrench-icon.png";
+import oilIcon from "./../assets/oil-icon.png"
+import wheelIcon from "./../assets/wheel-icon.png"
+import engineIcon from "./../assets/engine-icon.png"
+import wrenchIcon from "./../assets/wrench-icon.png"
 
 export const sectionHeaders = {
   lead: {
@@ -36,7 +36,7 @@ export const sectionHeaders = {
     title:
       "For any additional questions regarding M Fast Auto and our our services, feel free to contact us",
   },
-};
+}
 
 export const expCards = [
   {
@@ -59,7 +59,7 @@ export const expCards = [
     title: "Vehicle Maintenance",
     text: "At the least, you should have your car inspected by a qualified mechanic every 12 months to look for problems.",
   },
-];
+]
 
 export const repairServices = [
   {
@@ -91,7 +91,7 @@ export const repairServices = [
     title: "Battery Replacement",
     price: "$140.00",
   },
-];
+]
 
 export const preventiveMaintenance = [
   {
@@ -124,7 +124,7 @@ export const preventiveMaintenance = [
     title: "Tire Replacement",
     price: "$75.00",
   },
-];
+]
 
 export const bodyWork = [
   {
@@ -157,4 +157,27 @@ export const bodyWork = [
     title: "Window Regulator",
     price: "$300.00",
   },
-];
+]
+
+export const FAQ = [
+  {
+    question: "What is preventative maintenance?",
+    answer:
+      "Preventative maintenance is regular maintenance of your vehicle that helps keep your automobile running efficiently and eliminating potential problems that may leave you stranded.",
+  },
+  {
+    question: "What maintenance should I be doing and when?",
+    answer:
+      "On average, vehicles are estimated to need an oil change every 3,000 miles or every six months. This can vary based on your driving habits, your driving frequency, the age of your vehicle, and the quality of the oil you use.",
+  },
+  {
+    question: "How should I get my tires aligned?",
+    answer:
+      "For virtually all vehicles, it’s necessary to get your wheels aligned periodically. Most car experts recommend scheduling an alignment every other oil change, or approximately every 6,000 miles",
+  },
+  {
+    question: "When should I get a transmission flush?",
+    answer:
+      "Depending on what the manufacturer recommends, you may need to get a transmission flush every 30,000 miles or two years.",
+  },
+]

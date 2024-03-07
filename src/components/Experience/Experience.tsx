@@ -21,28 +21,25 @@ export default function Experience() {
               <span>Affordable auto repair</span>
             </li>
             <li className={styles.item}>
-              {" "}
               <FontAwesomeIcon
                 icon={faCheckCircle}
                 style={{ color: "#3dd169" }}
               />
-              <span>Maintenance packages</span>{" "}
+              <span>Maintenance packages</span>
             </li>
             <li className={styles.item}>
-              {" "}
               <FontAwesomeIcon
                 icon={faCheckCircle}
                 style={{ color: "#3dd169" }}
               />
-              <span>Inspection and repairs</span>{" "}
+              <span>Inspection and repairs</span>
             </li>
             <li className={styles.item}>
-              {" "}
               <FontAwesomeIcon
                 icon={faCheckCircle}
                 style={{ color: "#3dd169" }}
               />
-              <span>Dedicated to service</span>{" "}
+              <span>Dedicated to service</span>
             </li>
           </ul>
           <Button>Learn More</Button>
