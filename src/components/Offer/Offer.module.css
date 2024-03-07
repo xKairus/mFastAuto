@@ -20,6 +20,24 @@
   letter-spacing: 0.16px;
   font-weight: 500;
   padding: 1.625rem 2.1875rem;
+  position: relative;
+  isolation: isolate;
+}
+
+.service::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-bottom: 2px solid var(--clr-acc-base);
+  scale: 0 1;
+  transition: scale 450ms;
+  width: 50%;
+  left: 25%; 
+}
+
+.service:hover::after {
+  scale: 1 1;
 }
 
 .active {
@@ -36,9 +54,8 @@
     border-bottom: 2px solid var(--clr-acc-base);
     scale: 1 1;
     transition: scale 450ms;
-    width: 100px;
-    left: 50%;
-    transform: translate(-50%);
+    width: 50%;
+    left: 25%; 
 }
 
 .list {

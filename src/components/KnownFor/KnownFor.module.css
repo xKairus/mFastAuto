@@ -45,7 +45,6 @@
 }
 
 .card:hover::after {
-  border-bottom: 5px solid var(--clr-acc-base);
   scale: 1 1;
 }
 
