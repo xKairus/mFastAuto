@@ -1,12 +1,18 @@
 .guarantees {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("./../../assets/auto-service-4.jpg");
-  min-height: 40rem;
-  padding: 7.5rem;
+    background-size: cover;
+  padding: 7.5rem 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 39.4rem;
   margin: 0 auto;
   text-align: center;
@@ -15,9 +21,11 @@
 .models {
   margin: 5rem auto 0;
   max-width: 65rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
+  justify-items: center;
+  gap: 2rem;
 }
 
 .models img {
@@ -26,4 +34,37 @@
 
 .models img:hover {
   opacity: 0.5;
+}
+
+/*--------------------------------------------*/
+
+@media screen and (max-width: 800px) {
+  .guarantees {
+    padding: 5.5rem 0;
+  }
+
+  .models {
+    margin-top: 3rem;
+    grid-template-columns: repeat(2, 10rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .guarantees {
+    padding: 3rem 0;
+  }
+
+  .models {
+    margin-top: 2rem;
+
+    grid-template-columns: repeat(2, 7rem);
+    gap: 1rem;
+  }
+
+  .models img {
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 500px) {
 }
