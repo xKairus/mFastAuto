@@ -8,3 +8,24 @@
   flex-direction: column;
   text-align: center;
 }
+
+/*--------------------------------------------*/
+
+@media screen and (max-width: 1280px) {
+  .service {
+    margin-top: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .service {
+    margin-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .service {
+    margin-top: 1.5rem;
+  }
+}
+

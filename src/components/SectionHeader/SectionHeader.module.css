@@ -6,6 +6,7 @@
   line-height: 3.4rem;
   color: var(--clr-tp-base);
   text-wrap: balance;
+  max-width: 90%;
 }
 
 .big {
@@ -59,9 +60,8 @@
 
 @media screen and (max-width: 480px) {
   .title {
-    font-weight: 600;
     font-size: var(--fs-h4);
-    line-height: 2.4rem;
+    line-height: 1.8rem;
   }
 
   .big {
@@ -77,5 +77,6 @@
   .text {
     font-size: var(--fs-smallest);
     line-height: 1rem;
+    max-width: 90%;
   }
 }
