@@ -36,13 +36,14 @@
 
 @media screen and (max-width: 1440px) {
   .title {
+    margin: 0 0 1rem 0;
     font-size: var(--fs-h3);
     line-height: 2.4rem;
   }
-  
+
   .big {
     font-size: var(--fs-h2);
-    line-height: 3rem;
+    line-height: 2.8rem;
   }
 
   .small {
@@ -50,21 +51,22 @@
   }
 
   .text {
+    margin: 0 0 1rem 0;
     font-size: var(--fs-smaller);
+    line-height: 1.4rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .big {
-    font-size: var(--fs-h3);
-    line-height: 3rem;
-  }
-
   .title {
-    
-   font-weight: 600;
+    font-weight: 600;
     font-size: var(--fs-h4);
     line-height: 2.4rem;
+  }
+
+  .big {
+    font-size: var(--fs-h3);
+    line-height: 2.2rem;
   }
 
   .small {
@@ -73,6 +75,7 @@
   }
 
   .text {
-    font-size: var(--fs-smaller);
+    font-size: var(--fs-smallest);
+    line-height: 1rem;
   }
 }
