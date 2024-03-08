@@ -17,3 +17,67 @@
   margin-top: 15.5rem;
   margin-bottom: 3.75rem;
 }
+
+/*--------------------------------------------*/
+
+@media screen and (max-width: 1640px) {
+  .container {
+    max-width: 80%;
+  }
+
+  .lead {
+    min-height: 42.5rem;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .lead {
+    min-height: 37.5rem;
+  }
+
+  .info {
+    max-width: 28rem;
+    margin-top: 13.5rem;
+    margin-bottom: 3.75rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .lead {
+    min-height: 35.5rem;
+  }
+
+  .info {
+    max-width: 28rem;
+    margin-top: 10.5rem;
+    margin-bottom: 3.75rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .lead {
+    background-image: url(./../../assets/auto-shapes.png);
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .lead {
+    min-height: 0;
+  }
+
+  .info {
+    max-width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}

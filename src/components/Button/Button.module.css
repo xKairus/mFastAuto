@@ -1,7 +1,7 @@
 .button {
   --clr-btn: var(--clr-btn-base);
   cursor: pointer;
-  padding: 19.2px 35.2px;
+  padding: 1.2rem 2.2rem;
   background-color: var(--clr-btn);
   border: 0.0625rem solid var(--clr-btn);
   font-size: var(--fs-smaller);
@@ -43,4 +43,12 @@
 
 .inverse:hover {
   color: var(--clr-btn-text);
+}
+
+/*--------------------------------------------*/
+
+@media screen and (max-width: 1000px) {
+  .button {
+    padding: .8rem 1.8rem;
+  }
 }

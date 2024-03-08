@@ -5,6 +5,7 @@
 }
 
 .services {
+  padding: 0;
   display: flex;
   justify-content: center;
   list-style: none;
@@ -66,5 +67,59 @@
 .item {
   display: grid;
   column-gap: 3rem;
-  grid-template-columns: repeat(2, 36rem);
+  width: 90%;
+  grid-template-columns: repeat(2, 1fr);
 }
+
+/*--------------------------------------------*/
+
+@media screen and (max-width: 1280px) {
+  .offer {
+    padding: 4.5rem 0;
+  }
+
+  .item {
+    column-gap: 2rem;
+  }
+
+  .services {
+    margin: 4rem 0 2.5rem;
+  }
+
+  .service {
+    padding: 1.3rem 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .offer {
+    padding: 2.5rem 0;
+  }
+
+  .item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .services {
+    margin: 2.5rem 0 1.5rem;
+  }
+  
+  .service {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .offer {
+    padding: 1.5rem 0;
+  }
+
+  .services {
+    margin: 1.5rem 0 1rem;
+  }
+
+  .service {
+    padding: .7rem .6rem;
+  }
+}
+
