@@ -32,7 +32,6 @@
 
 .button:active::after {
   background-color: color-mix(in srgb, var(--clr-btn) 70%, black);
-
 }
 
 .inverse {
@@ -47,8 +46,16 @@
 
 /*--------------------------------------------*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1280px) {
   .button {
-    padding: .8rem 1.8rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: var(--fs-smallest);
+    font-weight: 500;
   }
 }

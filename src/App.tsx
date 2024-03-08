@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header />
-      <Lead />
+      {/* <Lead />
       <Service />
       <Experience />
       <Guarantees />
@@ -21,7 +21,7 @@ function App() {
       <KnownFor />
       <Offer />
       <Contacts />
-      <Directions />
+      <Directions /> */}
     </>
   )
 }
