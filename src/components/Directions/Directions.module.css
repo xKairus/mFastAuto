@@ -1,8 +1,46 @@
-#directions {
+.balloon {
+  box-sizing: border-box;
+  padding: 2rem;
+  width: 25rem;
 }
 
-.balloon {
-  width: 400px;
-  height: 400px;
-  background-color: red;
+.balloon__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
+
+.balloon__title {
+  font-family: var(--ff-third);
+  font-size: var(--fs-base);
+  color: var(--clr-tp-base);
+  font-weight: 500;
+  line-height: 1.45rem;
+  letter-spacing: -0.18px;
+
+  margin-left: 1rem;
+}
+
+.balloon__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--clr-acc-base);
+  min-width: 3rem;
+  height: 3rem;
+  color: rgb(55, 126, 249)
+}
+
+.balloon__open {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 4.2rem;
+}
+
+.balloon__text {
+  font-family: var(--ff-forth);
+  font-size: var(--fs-smaller);
+  color: var(--clr-tp-second);
+  line-height: 1.5rem;
+}
+
