@@ -61,7 +61,7 @@
 @media screen and (max-width: 480px) {
   .title {
     font-size: var(--fs-h4);
-    line-height: 1.8rem;
+    line-height: 1.6rem;
   }
 
   .big {
@@ -71,7 +71,7 @@
 
   .small {
     font-size: var(--fs-h4);
-    line-height: 2.4rem;
+    line-height: 1.4rem;
   }
 
   .text {

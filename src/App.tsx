@@ -15,12 +15,12 @@ function App() {
       <Header />
       <Lead />
       <Service />
-      <Experience />
+      {/* <Experience /> */}
       <Guarantees />
       <Professionalism />
       <KnownFor />
       <Offer />
-      <Contacts />
+      {/* <Contacts /> */}
       <Directions />
     </>
   )
