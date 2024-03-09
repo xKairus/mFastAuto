@@ -12,14 +12,14 @@ import Service from "./components/Service/Service"
 function App() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <Lead />
       <Service />
       <Experience />
       <Guarantees />
       <Professionalism />
       <KnownFor />
-      <Offer /> */}
+      <Offer />
       <Contacts />
       {/* <Directions /> */}
     </>

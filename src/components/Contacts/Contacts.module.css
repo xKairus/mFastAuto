@@ -105,6 +105,50 @@ details {
   }
 }
 
+.formModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-sizing: border-box;
+  padding: 3rem 5rem;
+  border-radius: 8px;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: none;
+  gap: 1rem;
+
+  h3 {
+    font-family: var(--ff-second);
+    font-size: var(--fs-h2);
+    color: var(--clr-tp-base);
+    font-weight: 500;
+  }
+
+  p {
+    font-family: var(--ff-base);
+    font-size: var(--fs-big);
+    color: var(--clr-tp-second);
+    font-weight: 400;
+  }
+}
+
+.formModal_active {
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 900; 
+}
+
 /*--------------------------------------------*/
 
 @media screen and (max-width: 1380px) {
@@ -169,6 +213,21 @@ details {
       line-height: 1.4rem;
     }
   }
+
+  .formModal {
+    
+  padding: 2rem 4rem;
+
+    h3 {
+      font-size: var(--fs-h3);
+      font-weight: 500;
+    }
+  
+    p {
+      font-size: var(--fs-bigger);
+      font-weight: 400;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -219,6 +278,19 @@ details {
       margin: 1rem 0 1rem;
       font-size: 0.8rem;
       line-height: 1.3rem;
+    }
+  }
+
+  .formModal {
+    padding: 1rem 2rem;
+    h3 {
+      font-size: var(--fs-h4);
+      font-weight: 500;
+    }
+  
+    p {
+      font-size: var(--fs-base);
+      font-weight: 400;
     }
   }
 }

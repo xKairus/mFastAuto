@@ -3,6 +3,7 @@ import { FAQ, sectionHeaders } from "../../data/typography"
 import Button from "../Button/Button"
 import { SectionHeaderInverse } from "../SectionHeader/SectionHeader"
 import styles from "./Contacts.module.css"
+import { useEffect, useState } from "react"
 
 interface MyForm {
   name: string
@@ -11,39 +12,50 @@ interface MyForm {
 }
 
 export default function Contacts() {
+  const [isModalActive, setIsModalActive] = useState(false)
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<MyForm>()
 
+  useEffect(() => {
+    if (isModalActive) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"
+    }
+  }, [isModalActive])
+
   const onSubmit: SubmitHandler<MyForm> = (data) => {
+    setIsModalActive(true)
     console.log(data)
   }
 
-  // const error: SubmitErrorHandler<MyForm> = (data) => {
-  //   console.log(data)
-  // }
-
-  // const isEmailValid = () => {
-  //   console.log("valid")
-  //   return false
-  // }
+  const closeModal = () => {
+    setIsModalActive(false)
+    console.log(isModalActive)
+  }
 
   return (
     <section className={styles.contacts} id="Contact">
-      {/* <div className={styles.title}>
+      <div className={styles.title}>
         <SectionHeaderInverse {...sectionHeaders.contact} />
-      </div> */}
+      </div>
       <div className={styles.container}>
-        {/* <div className={styles.faq}>
+        <div className={styles.faq}>
           {FAQ.map((QA, index) => (
             <details key={index}>
               <summary>{QA.question}</summary>
               <p>{QA.answer}</p>
             </details>
           ))}
-        </div> */}
+        </div>
         <div className={styles.formWrapper}>
           <form
             noValidate
@@ -86,11 +98,28 @@ export default function Contacts() {
               placeholder="Enter your message"
             />
             {errors.text?.message && <p>{errors.text?.message}</p>}
-            
+
             <Button>Submit</Button>
           </form>
+          <div
+            className={`${styles.formModal} ${
+              isModalActive && styles.formModal_active
+            }`}
+          >
+            <div>
+              <h3>Thank you for your message!</h3>
+              <p>
+                We've received it and will get back to you shortly. Your
+                feedback is important to us. For urgent matters, please contact
+                us directly at mfastauto@gmail.com.
+              </p>
+              <p>Best regards, M FAST AUTO</p>
+            </div>
+            <Button onClick={closeModal}>Close</Button>
+          </div>
         </div>
       </div>
+      {isModalActive && <div onClick={closeModal} className={styles.overlay} />}
     </section>
   )
 }
