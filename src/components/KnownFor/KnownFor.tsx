@@ -1,13 +1,14 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { sectionHeaders } from "../../data/typography";
-import { SectionHeader } from "../SectionHeader/SectionHeader";
-import styles from "./KnownFor.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { sectionHeaders } from "../../data/typography"
+import { SectionHeader } from "../SectionHeader/SectionHeader"
+import { faHandshake } from "@fortawesome/free-regular-svg-icons"
 import {
   faAward,
   faCar,
   faScrewdriverWrench,
-} from "@fortawesome/free-solid-svg-icons";
-import { faHandshake } from "@fortawesome/free-regular-svg-icons";
+} from "@fortawesome/free-solid-svg-icons"
+
+import styles from "./KnownFor.module.css"
 
 export default function KnownFor() {
   return (
@@ -18,6 +19,7 @@ export default function KnownFor() {
       <div className={styles.cards}>
         <div className={styles.card}>
           <FontAwesomeIcon
+            className={styles.faicon}
             icon={faHandshake}
             size="4x"
             style={{ color: "#377ef9" }}
@@ -26,6 +28,7 @@ export default function KnownFor() {
         </div>
         <div className={styles.card}>
           <FontAwesomeIcon
+            className={styles.faicon}
             icon={faAward}
             size="4x"
             style={{ color: "#377ef9" }}
@@ -34,6 +37,7 @@ export default function KnownFor() {
         </div>
         <div className={styles.card}>
           <FontAwesomeIcon
+            className={styles.faicon}
             icon={faCar}
             size="4x"
             style={{ color: "#377ef9" }}
@@ -42,6 +46,7 @@ export default function KnownFor() {
         </div>
         <div className={styles.card}>
           <FontAwesomeIcon
+            className={styles.faicon}
             icon={faScrewdriverWrench}
             size="4x"
             style={{ color: "#377ef9" }}
@@ -50,5 +55,5 @@ export default function KnownFor() {
         </div>
       </div>
     </section>
-  );
+  )
 }
