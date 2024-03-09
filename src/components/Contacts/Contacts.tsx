@@ -27,9 +27,27 @@ export default function Contacts() {
                 contact us with any car repair questions.
               </p>
             </div>
-            <input type="text" name="name" id="" required />
-            <input type="email" name="email" id="" required />
-            <input type="text" name="message" id="" required />
+            <input
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              id=""
+              required
+            />
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              id=""
+              required
+            />
+            <textarea
+              rows={5}
+              placeholder="Enter your message"
+              name="message"
+              id=""
+              required
+            />
             <Button type="submit">Submit</Button>
           </form>
         </div>

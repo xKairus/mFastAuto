@@ -20,8 +20,8 @@ function App() {
       <Professionalism />
       <KnownFor />
       <Offer />
-      {/* <Contacts /> */}
-      <Directions />
+      <Contacts />
+      {/* <Directions /> */}
     </>
   )
 }
