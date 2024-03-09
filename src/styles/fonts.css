@@ -6,6 +6,7 @@
   src: url(../fonts/JosefinSans-Regular.woff2) format("woff2"),
     url(../fonts/JosefinSans-Regular.woff) format("woff");
 }
+
 @font-face {
   font-family: "Helvetica Neue";
   font-style: normal;
@@ -14,6 +15,7 @@
   src: url(../fonts/HelveticaNeue-Regular.woff2) format("woff2"),
     url(../fonts/HelveticaNeue-Regular.woff) format("woff");
 }
+
 @font-face {
   font-family: "Roboto";
   font-style: normal;

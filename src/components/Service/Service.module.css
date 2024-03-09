@@ -24,13 +24,13 @@
 
 @media screen and (max-width: 1000px) {
   .service {
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
   }
 }
 
 @media screen and (max-width: 500px) {
   .service {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
 }
 
