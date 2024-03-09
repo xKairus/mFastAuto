@@ -19,7 +19,9 @@
     "@pbe/react-yandex-maps": "^1.2.5",
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-form-hook": "^0.0.1",
+    "react-hook-form": "^7.51.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

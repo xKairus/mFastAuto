@@ -70,6 +70,16 @@ details {
     padding: 1rem;
   }
 
+  p {
+    color: red;
+    margin: 0;
+  }
+
+}
+
+.inputField {
+  
+  width: 100%;
 }
 
 .formText {
