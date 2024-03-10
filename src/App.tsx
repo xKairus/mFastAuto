@@ -21,7 +21,7 @@ function App() {
       <KnownFor />
       <Offer />
       <Contacts />
-      {/* <Directions /> */}
+      <Directions />
     </>
   )
 }
