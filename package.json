@@ -22,12 +22,14 @@
     "react-dom": "^18.2.0",
     "react-form-hook": "^0.0.1",
     "react-hook-form": "^7.51.0",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "react-scroll": "^1.9.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
     "@types/react-anchor-link-smooth-scroll": "^1.0.5",
     "@types/react-dom": "^18.2.17",
+    "@types/react-scroll": "^1.8.10",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react-swc": "^3.5.0",

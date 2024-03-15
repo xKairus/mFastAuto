@@ -5,7 +5,7 @@ import styles from "./Professionalism.module.css"
 
 export default function Professionalism() {
   return (
-    <section className={styles.pro} id="Service">
+    <section className={styles.pro}>
       <div className={styles.container}>
         <div className={styles.img}></div>
         <div className={styles.info}>

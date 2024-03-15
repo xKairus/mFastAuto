@@ -14,11 +14,15 @@ function App() {
     <>
       <Header />
       <Lead />
-      <Service />
-      <Experience />
-      <Guarantees />
-      <Professionalism />
-      <KnownFor />
+      <div id="About">
+        <Service />
+        <Experience />
+        <Guarantees />
+      </div>
+      <div id="Service">
+        <Professionalism />
+        <KnownFor />
+      </div>
       <Offer />
       <Contacts />
       <Directions />

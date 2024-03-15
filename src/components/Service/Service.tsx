@@ -4,7 +4,7 @@ import styles from "./Service.module.css"
 
 export default function Service() {
   return (
-    <section className={styles.service} id="About">
+    <section className={styles.service}>
       <div className={styles.container}>
         <SectionHeader {...sectionHeaders.service} />
       </div>
