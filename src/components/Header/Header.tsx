@@ -17,7 +17,7 @@ const nav: NavItem[] = [
 ]
 
 const Header = () => {
-  const [activeId, setActiveId] = useState<string>("")
+  const [activeId, setActiveId] = useState<string>("Home")
 
   const handleScroll = () => {
     const sections = nav.map((item) => document.getElementById(item.href))
