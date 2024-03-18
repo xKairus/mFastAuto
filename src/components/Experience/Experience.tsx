@@ -1,5 +1,5 @@
 import Button from "../Button/Button";
-import { SectionHeader } from "../SectionHeader/SectionHeader";
+import SectionHeader from "../SectionHeader/SectionHeader";
 import { sectionHeaders, expCards } from "../../data/typography";
 
 import styles from "./Experience.module.css";

@@ -1,7 +1,7 @@
-import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form"
+import { SubmitHandler, useForm } from "react-hook-form"
 import { FAQ, sectionHeaders } from "../../data/typography"
 import Button from "../Button/Button"
-import { SectionHeaderInverse } from "../SectionHeader/SectionHeader"
+import SectionHeader from "../SectionHeader/SectionHeader"
 import styles from "./Contacts.module.css"
 import { useEffect, useState } from "react"
 
@@ -45,7 +45,7 @@ export default function Contacts() {
   return (
     <section className={styles.contacts} id="Contact">
       <div className={styles.title}>
-        <SectionHeaderInverse {...sectionHeaders.contact} />
+        <SectionHeader inverse={true} {...sectionHeaders.contact} />
       </div>
       <div className={styles.container}>
         <div className={styles.faq}>
@@ -76,6 +76,7 @@ export default function Contacts() {
               aria-invalid={errors.name ? true : false}
               type="text"
               placeholder="Enter your name"
+              autoComplete="on"
             />
             {errors.name?.message && <p>{errors.name?.message}</p>}
             <input
@@ -88,6 +89,7 @@ export default function Contacts() {
               })}
               type="email"
               placeholder="Enter your email"
+              autoComplete="on"
             />
             {errors.email?.message && <p>{errors.email?.message}</p>}
             <textarea

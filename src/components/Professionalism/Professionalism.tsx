@@ -1,6 +1,6 @@
 import { sectionHeaders } from "../../data/typography"
 import Button from "../Button/Button"
-import { SectionHeader } from "../SectionHeader/SectionHeader"
+import SectionHeader from "../SectionHeader/SectionHeader"
 import styles from "./Professionalism.module.css"
 
 export default function Professionalism() {

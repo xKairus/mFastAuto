@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { sectionHeaders } from "../../data/typography"
-import { SectionHeader } from "../SectionHeader/SectionHeader"
+import SectionHeader from "../SectionHeader/SectionHeader"
 import { faHandshake } from "@fortawesome/free-regular-svg-icons"
 import {
   faAward,

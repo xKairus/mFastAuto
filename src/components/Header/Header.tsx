@@ -67,17 +67,21 @@ const Header = () => {
         <span className={styles.logo}>M FAST AUTO</span>
         <nav className={styles.nav}>
           {nav.map((item) => (
-            <a
+            <div
+              className={styles.link_wrapper}
               key={item.name}
-              href={`#${item.href}`}
               onClick={(e) => {
                 e.preventDefault()
                 handleClick(item.href)
               }}
-              className={activeId === item.href ? styles.active : ""}
             >
-              {item.name}
-            </a>
+              <a
+                className={activeId === item.href ? styles.active : ""}
+                href={`#${item.href}`}
+              >
+                {item.name}
+              </a>
+            </div>
           ))}
         </nav>
         <Button>Make appointment</Button>

@@ -5,7 +5,7 @@ import {
   preventiveMaintenance,
   bodyWork,
 } from "./../../data/typography.tsx"
-import { SectionHeader } from "../SectionHeader/SectionHeader"
+import SectionHeader from "../SectionHeader/SectionHeader"
 import PriceList from "../PriceList/PriceList.tsx"
 import { useState } from "react"
 

@@ -23,6 +23,7 @@
   padding: 1.625rem 2.1875rem;
   position: relative;
   isolation: isolate;
+  cursor: pointer;
 }
 
 .service::after {
@@ -34,7 +35,7 @@
   scale: 0 1;
   transition: scale 450ms;
   width: 50%;
-  left: 25%; 
+  left: 25%;
 }
 
 .service:hover::after {
@@ -48,15 +49,15 @@
 }
 
 .active::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    border-bottom: 2px solid var(--clr-acc-base);
-    scale: 1 1;
-    transition: scale 450ms;
-    width: 50%;
-    left: 25%; 
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-bottom: 2px solid var(--clr-acc-base);
+  scale: 1 1;
+  transition: scale 450ms;
+  width: 50%;
+  left: 25%;
 }
 
 .list {
@@ -70,6 +71,8 @@
   width: 90%;
   grid-template-columns: repeat(2, 1fr);
 }
+
+
 
 /*--------------------------------------------*/
 
@@ -103,7 +106,7 @@
   .services {
     margin: 2.5rem 0 1.5rem;
   }
-  
+
   .service {
     padding: 1rem 1.5rem;
   }
@@ -119,7 +122,6 @@
   }
 
   .service {
-    padding: .7rem .6rem;
+    padding: 0.7rem 0.6rem;
   }
 }
-

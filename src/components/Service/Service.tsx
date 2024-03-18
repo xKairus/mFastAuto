@@ -1,5 +1,5 @@
 import { sectionHeaders } from "../../data/typography"
-import { SectionHeader } from "../SectionHeader/SectionHeader"
+import SectionHeader from "../SectionHeader/SectionHeader"
 import styles from "./Service.module.css"
 
 export default function Service() {

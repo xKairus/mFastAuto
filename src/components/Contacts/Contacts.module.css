@@ -1,7 +1,8 @@
 .contacts {
   box-sizing: border-box;
   padding: 7.5rem 0;
-  background-image: url("./../../assets/home_auto_service_contact_bg4.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./../../assets/home_auto_service_contact_bg4.jpg");
 }
 
 .title {
@@ -61,7 +62,8 @@ details {
   flex-direction: column;
   align-items: center;
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
     min-height: 3.5rem;
     background-color: var(--clr-bg-second);
@@ -71,14 +73,12 @@ details {
   }
 
   p {
-    color: red;
+    color: var(--clr-err-base);
     margin: 0;
   }
-
 }
 
 .inputField {
-  
   width: 100%;
 }
 
@@ -110,11 +110,11 @@ details {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: var(--clr-bg-base);
   box-sizing: border-box;
   padding: 3rem 5rem;
   border-radius: 8px;
-  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
   display: none;
   gap: 1rem;
@@ -145,8 +145,8 @@ details {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 900; 
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 900;
 }
 
 /*--------------------------------------------*/
@@ -193,7 +193,8 @@ details {
   .form {
     gap: 0.6125rem;
 
-    input, textarea {
+    input,
+    textarea {
       min-height: 2.5rem;
       background-color: var(--clr-bg-second);
       border: 1px solid var(--clr-brd-base);
@@ -215,14 +216,13 @@ details {
   }
 
   .formModal {
-    
-  padding: 2rem 4rem;
+    padding: 2rem 4rem;
 
     h3 {
       font-size: var(--fs-h3);
       font-weight: 500;
     }
-  
+
     p {
       font-size: var(--fs-bigger);
       font-weight: 400;
@@ -262,7 +262,8 @@ details {
   .form {
     gap: 0.5rem;
 
-    input, textarea {
+    input,
+    textarea {
       min-height: 2rem;
     }
   }
@@ -287,7 +288,7 @@ details {
       font-size: var(--fs-h4);
       font-weight: 500;
     }
-  
+
     p {
       font-size: var(--fs-base);
       font-weight: 400;
