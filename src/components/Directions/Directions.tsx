@@ -1,8 +1,6 @@
 import { Map, Placemark, YMaps, ZoomControl } from "@pbe/react-yandex-maps"
 import styles from "./Directions.module.css"
 
-// YMap.init('f8c1265b-ddbc-49f3-895a-61ddd32271ff')
-
 export default function Directions() {
   return (
     <section id="Directions">

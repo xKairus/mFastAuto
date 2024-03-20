@@ -3,7 +3,9 @@ import { FAQ, sectionHeaders } from "../../data/typography"
 import Button from "../Button/Button"
 import SectionHeader from "../SectionHeader/SectionHeader"
 import styles from "./Contacts.module.css"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import { useScrollAnimation } from "../../hooks/useScrollAnimation"
+import { fadeIn, moveRight } from "../../utils/animations"
 
 interface MyForm {
   name: string
@@ -12,6 +14,8 @@ interface MyForm {
 }
 
 export default function Contacts() {
+  const ref = useRef<HTMLDivElement>(null)
+  const isAnimated = useScrollAnimation(ref)
   const [isModalActive, setIsModalActive] = useState(false)
 
   const {
@@ -43,14 +47,14 @@ export default function Contacts() {
   }
 
   return (
-    <section className={styles.contacts} id="Contact">
+    <section className={styles.contacts} ref={ref} id="Contact">
       <div className={styles.title}>
         <SectionHeader inverse={true} {...sectionHeaders.contact} />
       </div>
       <div className={styles.container}>
         <div className={styles.faq}>
           {FAQ.map((QA, index) => (
-            <details key={index}>
+            <details key={index} style={moveRight(isAnimated)}>
               <summary>{QA.question}</summary>
               <p>{QA.answer}</p>
             </details>
@@ -61,6 +65,7 @@ export default function Contacts() {
             noValidate
             onSubmit={handleSubmit(onSubmit)}
             className={styles.form}
+            style={fadeIn(isAnimated)}
           >
             <div className={styles.formText}>
               <h3>Make an appointment or leave feedback</h3>
@@ -101,7 +106,7 @@ export default function Contacts() {
             />
             {errors.text?.message && <p>{errors.text?.message}</p>}
 
-            <Button>Submit</Button>
+            <Button disableAnimation={true}>Submit</Button>
           </form>
           <div
             className={`${styles.formModal} ${

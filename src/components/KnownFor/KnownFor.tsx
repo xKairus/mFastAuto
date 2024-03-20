@@ -9,15 +9,21 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 
 import styles from "./KnownFor.module.css"
+import { useRef } from "react"
+import { useScrollAnimation } from "../../hooks/useScrollAnimation"
+import { fadeIn, scaleUp } from "../../utils/animations"
 
 export default function KnownFor() {
+  const ref = useRef<HTMLDivElement>(null)
+  const isAnimated = useScrollAnimation(ref)
+
   return (
-    <section className={styles.knownFor}>
+    <section className={styles.knownFor} ref={ref}>
       <div className={styles.header}>
         <SectionHeader {...sectionHeaders.knownFor} />
       </div>
-      <div className={styles.cards}>
-        <div className={styles.card}>
+      <div className={styles.cards} >
+        <div className={styles.card} style={scaleUp(isAnimated)}>
           <FontAwesomeIcon
             className={styles.faicon}
             icon={faHandshake}
@@ -26,7 +32,7 @@ export default function KnownFor() {
           />
           <span>Honesty</span>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} style={scaleUp(isAnimated)}>
           <FontAwesomeIcon
             className={styles.faicon}
             icon={faAward}
@@ -35,7 +41,7 @@ export default function KnownFor() {
           />
           <span>Quality</span>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} style={scaleUp(isAnimated)}>
           <FontAwesomeIcon
             className={styles.faicon}
             icon={faCar}
@@ -44,7 +50,7 @@ export default function KnownFor() {
           />
           <span>Safety</span>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} style={scaleUp(isAnimated)}>
           <FontAwesomeIcon
             className={styles.faicon}
             icon={faScrewdriverWrench}

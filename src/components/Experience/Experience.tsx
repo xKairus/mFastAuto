@@ -5,21 +5,21 @@ import { sectionHeaders, expCards } from "../../data/typography"
 import styles from "./Experience.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"
-import { moveRight } from "../../utils/animations"
+import { fadeIn, moveRight, scaleUp } from "../../utils/animations"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
 import { useRef } from "react"
 
 export default function Experience() {
-  const ref = useRef<HTMLUListElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
   const isAnimated = useScrollAnimation(ref)
 
   return (
-    <section className={styles.experience}>
+    <section className={styles.experience} ref={ref}>
       <div className={styles.container}>
         <div className={styles.info}>
           <SectionHeader {...sectionHeaders.experience} size="small" />
 
-          <ul className={styles.list} ref={ref}>
+          <ul className={styles.list}>
             <li className={styles.item} style={moveRight(isAnimated)}>
               <FontAwesomeIcon
                 icon={faCheckCircle}
@@ -56,6 +56,7 @@ export default function Experience() {
             <div
               key={index}
               className={`${styles.card} ${styles["card" + (index + 1)]}`}
+              style={scaleUp(isAnimated)}
             >
               <img src={card.icon} />
               <h3>{card.title}</h3>

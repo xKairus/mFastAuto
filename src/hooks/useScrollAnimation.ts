@@ -19,7 +19,7 @@ export const useScrollAnimation = (ref: RefObject<HTMLElement>): boolean => {
 
     observerRef.current = new IntersectionObserver(handleIntersect, {
       rootMargin: "0px",
-      threshold: 0.5,
+      threshold: 0.2,
     })
 
     observerRef.current.observe(ref.current)
