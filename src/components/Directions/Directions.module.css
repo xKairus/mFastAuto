@@ -1,3 +1,12 @@
+.mapContainer {
+  width: 100%;
+}
+
+.Map {
+  width: 100%;
+  height: 720px;
+}
+
 .balloon {
   box-sizing: border-box;
   padding: 2rem;
@@ -16,7 +25,7 @@
   color: var(--clr-tp-base);
   font-weight: 500;
   line-height: 1.45rem;
-  letter-spacing: -0.18px;
+  letter-spacing: -0.1792px;
 
   margin-left: 1rem;
 }
@@ -28,7 +37,7 @@
   border: 1px solid var(--clr-acc-base);
   min-width: 3rem;
   height: 3rem;
-  color: rgb(55, 126, 249)
+  color: rgb(55, 126, 249);
 }
 
 .balloon__open {
@@ -44,3 +53,78 @@
   line-height: 1.5rem;
 }
 
+@media screen and (max-width: 1280px) {
+  .Map {
+    height: 600px;
+  }
+
+  .balloon {
+    box-sizing: border-box;
+    padding: 1.5rem;
+    width: 18rem;
+  }
+
+  .balloon__row {
+    margin-bottom: 0.7rem;
+  }
+
+  .balloon__title {
+    font-size: var(--fs-smaller);
+    line-height: 1.2rem;
+
+    margin-left: 0.7rem;
+  }
+
+  .balloon__icon {
+    min-width: 2rem;
+    height: 2rem;
+    color: rgb(55, 126, 249);
+  }
+
+  .balloon__open {
+    margin-left: 2.9rem;
+  }
+
+  .balloon__text {
+    font-size: var(--fs-smallest);
+    line-height: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Map {
+    height: 450px;
+  }
+
+  .balloon {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    width: 15rem;
+  }
+
+  .balloon__row {
+    margin-bottom: 0.5rem;
+  }
+
+  .balloon__title {
+    font-size: var(--fs-smaller);
+    line-height: 1rem;
+
+    margin-left: 0.5rem;
+  }
+
+  .balloon__icon {
+    min-width: 2rem;
+    height: 2rem;
+    color: rgb(55, 126, 249);
+  }
+
+  .balloon__open {
+    margin-left: 2.6rem;
+  }
+
+  .balloon__text {
+    font-size: var(--fs-smallest);
+    line-height: 1rem;
+  }
+}
