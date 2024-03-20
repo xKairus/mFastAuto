@@ -1,37 +1,35 @@
-import { useState, useEffect, useRef, RefObject } from 'react';
+import { useState, useEffect, useRef, RefObject } from "react"
 
-export const useScrollAnimation = (
-  ref: RefObject<HTMLElement>,
-): boolean => {
-  const [isAnimated, setIsAnimated] = useState(false);
-  const observerRef = useRef<IntersectionObserver | null>(null);
+export const useScrollAnimation = (ref: RefObject<HTMLElement>): boolean => {
+  const [isAnimated, setIsAnimated] = useState(false)
+  const observerRef = useRef<IntersectionObserver | null>(null)
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current) return
 
     const handleIntersect: IntersectionObserverCallback = (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setIsAnimated(true);
-        } else {
-          setIsAnimated(false);
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !isAnimated) {
+          setIsAnimated(true)
+        } else if (!entry.isIntersecting && isAnimated) {
+          setIsAnimated(false)
         }
-      });
-    };
+      })
+    }
 
     observerRef.current = new IntersectionObserver(handleIntersect, {
-      rootMargin: '0px',
-      threshold: 0.5, // Порог пересечения
-    });
+      rootMargin: "0px",
+      threshold: 0.5,
+    })
 
-    observerRef.current.observe(ref.current);
+    observerRef.current.observe(ref.current)
 
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect();
+        observerRef.current.disconnect()
       }
-    };
-  }, [ref]);
+    }
+  }, [ref, isAnimated])
 
-  return isAnimated;
-};
+  return isAnimated
+}

@@ -64,7 +64,9 @@ const Header = () => {
   return (
     <header className={`${styles.header} header`}>
       <div className={styles.container}>
-        <span className={styles.logo}>M FAST AUTO</span>
+        <span className={styles.logo}>
+          <a href="#Home">M FAST AUTO</a>
+        </span>
         <nav className={styles.nav}>
           {nav.map((item) => (
             <div
@@ -84,7 +86,7 @@ const Header = () => {
             </div>
           ))}
         </nav>
-        <Button>Make appointment</Button>
+        <Button disableAnimation={true}>Make appointment</Button>
       </div>
     </header>
   )
