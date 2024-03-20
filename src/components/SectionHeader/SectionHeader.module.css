@@ -1,3 +1,13 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper_left {
+  align-items: start;
+}
+
 .title {
   margin: 0 0 1.5rem 0;
   font-size: var(--fs-h2);
@@ -6,7 +16,6 @@
   line-height: 3.4rem;
   color: var(--clr-tp-base);
   text-wrap: balance;
-  max-width: 90%;
 }
 
 .big {
@@ -31,6 +40,8 @@
 
 .inverse {
   color: var(--clr-tp-third);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*--------------------------------------------*/
@@ -55,6 +66,12 @@
     margin: 0 0 1rem 0;
     font-size: var(--fs-smaller);
     line-height: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .title {
+    max-width: 90%;
   }
 }
 

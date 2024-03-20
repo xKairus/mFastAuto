@@ -8,7 +8,7 @@ export default function Lead() {
     <section className={styles.lead} id="Home">
       <div className={styles.container}>
         <div className={styles.info}>
-          <SectionHeader {...sectionHeaders.lead} size="big" />
+          <SectionHeader {...sectionHeaders.lead} size="big" left={true} />
         </div>
         <Button newClass={"inverse"}>Get A Quote</Button>
       </div>
