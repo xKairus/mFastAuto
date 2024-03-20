@@ -6,6 +6,7 @@ import styles from "./Contacts.module.css"
 import { useEffect, useRef, useState } from "react"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
 import { fadeIn, moveRight } from "../../utils/animations"
+import Form from "../Form/Form"
 
 interface MyForm {
   name: string
@@ -60,54 +61,38 @@ export default function Contacts() {
             </details>
           ))}
         </div>
-        <div className={styles.formWrapper}>
-          <form
-            noValidate
-            onSubmit={handleSubmit(onSubmit)}
-            className={styles.form}
-            style={fadeIn(isAnimated)}
-          >
-            <div className={styles.formText}>
-              <h3>Make an appointment or leave feedback</h3>
-              <p>
-                If you have any questions about us please don't hesitate to
-                contact us with any car repair questions.
-              </p>
-            </div>
-            <input
-              {...register("name", {
-                required: { value: true, message: "Name is required" },
-              })}
-              aria-invalid={errors.name ? true : false}
-              type="text"
-              placeholder="Enter your name"
-              autoComplete="on"
-            />
-            {errors.name?.message && <p>{errors.name?.message}</p>}
-            <input
-              {...register("email", {
-                required: { value: true, message: "Email is required" },
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: "Invalid email format",
+        <div className={styles.formWrapper} style={fadeIn(isAnimated)}>
+          <Form
+            title="Make an appointment or leave feedback"
+            subtitle="If you have any questions about us please don't hesitate to contact us with any car repair questions."
+            fields={[
+              {
+                name: "name",
+                type: "text",
+                placeholder: "Enter your name",
+                validation: { required: "Name is required" },
+              },
+              {
+                name: "email",
+                type: "email",
+                placeholder: "Enter your email",
+                validation: {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                    message: "Invalid email format",
+                  },
                 },
-              })}
-              type="email"
-              placeholder="Enter your email"
-              autoComplete="on"
-            />
-            {errors.email?.message && <p>{errors.email?.message}</p>}
-            <textarea
-              {...register("text", {
-                required: { value: true, message: "Leave your feedback" },
-              })}
-              rows={5}
-              placeholder="Enter your message"
-            />
-            {errors.text?.message && <p>{errors.text?.message}</p>}
-
-            <Button disableAnimation={true}>Submit</Button>
-          </form>
+              },
+              {
+                name: "text",
+                type: "textarea",
+                placeholder: "Enter your message",
+                validation: { required: "Leave your feedback" },
+              },
+            ]}
+            onSubmit={onSubmit}
+          />
           <div
             className={`${styles.formModal} ${
               isModalActive && styles.formModal_active

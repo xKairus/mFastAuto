@@ -44,6 +44,10 @@
   color: var(--clr-btn-text);
 }
 
+.form {
+  width: 100%;
+}
+
 /*--------------------------------------------*/
 
 @media screen and (max-width: 1280px) {
