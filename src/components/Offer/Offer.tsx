@@ -7,7 +7,9 @@ import {
 } from "./../../data/typography.tsx"
 import SectionHeader from "../SectionHeader/SectionHeader"
 import PriceList from "../PriceList/PriceList.tsx"
-import { useState } from "react"
+import { useRef, useState } from "react"
+import { useScrollAnimation } from "../../hooks/useScrollAnimation.ts"
+import { scaleUp } from "../../utils/animations.ts"
 
 interface Service {
   title: string
@@ -19,6 +21,9 @@ export default function Offer() {
   const [selectedOffer, setSelectedOffer] = useState<Service[]>(repairServices)
   const [activeList, setActiveList] = useState<string>("Repair Services")
 
+  const ref = useRef<HTMLUListElement>(null)
+  const isAnimated = useScrollAnimation(ref)
+
   const handleServiceClick = (services: Service[], listName: string) => {
     setSelectedOffer(services)
     setActiveList(listName)
@@ -28,8 +33,11 @@ export default function Offer() {
     <section className={styles.offer} id="Pricing">
       <SectionHeader {...sectionHeaders.offer} />
       <div>
-        <ul className={styles.services}>
+        <ul ref={ref} className={styles.services}>
           <li
+            style={
+              activeList !== "Repair Services" ? scaleUp(isAnimated) : undefined
+            }
             className={`${styles.service} ${
               activeList === "Repair Services" && styles.active
             }`}
@@ -40,6 +48,11 @@ export default function Offer() {
             Repair Services
           </li>
           <li
+            style={
+              activeList !== "Preventive Maintenance"
+                ? scaleUp(isAnimated)
+                : undefined
+            }
             className={`${styles.service} ${
               activeList === "Preventive Maintenance" && styles.active
             }`}
@@ -53,6 +66,7 @@ export default function Offer() {
             Preventive Maintenance
           </li>
           <li
+            style={activeList !== "Body Work" ? scaleUp(isAnimated) : undefined}
             className={`${styles.service} ${
               activeList === "Body Work" && styles.active
             }`}
