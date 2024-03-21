@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import styles from "./Nav.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope, faPhone, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faFacebookF, faYelp } from "@fortawesome/free-brands-svg-icons"
 
 interface NavItem {
   name: string
@@ -88,6 +89,9 @@ export default function Nav({ isOpen, onClose }: NavProps) {
         ))}
       </nav>
       <nav className={`${styles.mobile} ${isOpen && styles.mobile_open}`}>
+        <span className={styles.logo}>
+          <a href="#Home">M FAST AUTO</a>
+        </span>
         {nav.map((item) => (
           <div
             className={styles.link_wrapper}
@@ -105,6 +109,50 @@ export default function Nav({ isOpen, onClose }: NavProps) {
             </a>
           </div>
         ))}
+        <div className={styles.contacts}>
+          <a className={styles.contact} href="tel:1(323)660-9920">
+            <FontAwesomeIcon
+              className={styles.faicon}
+              icon={faPhone}
+              size="sm"
+              style={{ color: "#377ef9" }}
+            />
+            <span>1(323) 660-9920</span>
+          </a>
+          <a className={styles.contact} href="mailto:mfastauto@gmail.com">
+            <FontAwesomeIcon
+              className={styles.faicon}
+              icon={faEnvelope}
+              size="sm"
+              style={{ color: "#377ef9" }}
+            />
+            <span>mfastauto@gmail.com</span>
+          </a>
+        </div>
+        <div className={styles.socials}>
+          <a
+            className={styles.social}
+            href="https://www.facebook.com/MfastAutoRepair"
+          >
+            <FontAwesomeIcon
+              className={styles.faicon}
+              icon={faFacebookF}
+              size="sm"
+              style={{ color: "#377ef9" }}
+            />
+          </a>
+          <a
+            className={styles.social}
+            href="https://www.yelp.com/biz/mfast-auto-repair-los-angeles-3"
+          >
+            <FontAwesomeIcon
+              className={styles.faicon}
+              icon={faYelp}
+              size="sm"
+              style={{ color: "#377ef9" }}
+            />
+          </a>
+        </div>
         <div onClick={onClose}>
           <FontAwesomeIcon
             className={styles.close}
