@@ -1,4 +1,4 @@
-import { SubmitHandler, useForm } from "react-hook-form"
+import { SubmitHandler } from "react-hook-form"
 import { FAQ, sectionHeaders } from "../../data/typography"
 import Button from "../Button/Button"
 import SectionHeader from "../SectionHeader/SectionHeader"
@@ -18,12 +18,6 @@ export default function Contacts() {
   const ref = useRef<HTMLDivElement>(null)
   const isAnimated = useScrollAnimation(ref)
   const [isModalActive, setIsModalActive] = useState(false)
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<MyForm>()
 
   useEffect(() => {
     if (isModalActive) {

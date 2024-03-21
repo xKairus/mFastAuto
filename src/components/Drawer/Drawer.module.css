@@ -1,0 +1,22 @@
+.drawer {
+  position: absolute;
+  background-color: var(--clr-bg-base);
+  height: 100vh;
+  max-width: 30rem;
+  top: 0;
+  right: 0;
+  padding: 3.125rem;
+  box-sizing: border-box;
+}
+
+.close {
+  position: absolute;
+  top: 2.6rem;
+  right: 2.6rem;
+  border: 1px solid var(--clr-tp-base);
+  border-radius: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  box-sizing: border-box;
+  padding: .125rem;
+}

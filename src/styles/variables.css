@@ -7,9 +7,9 @@
   --clr-tp-second: #445781;
   --clr-tp-third: #ffffff;
 
-  --color-link: #1e266d;
-  --color-link-hover: #777777;
-  --color-link-active: #377ef9;
+  --clr-link: #1e266d;
+  --clr-link-hover: #777777;
+  --clr-link-active: #377ef9;
 
   --clr-acc-base: #377ef9;
   --clr-acc-second: #f0bb1f;
@@ -33,7 +33,7 @@
 
   --fs-smallest: 0.75rem;
   --fs-small: 0.75rem;
-  --fs-smaller: 1rem;
+  --fs-smaller: .9375rem;
   --fs-base: 1.125rem;
   --fs-bigger: 1.25rem;
   --fs-big: 1.375rem;

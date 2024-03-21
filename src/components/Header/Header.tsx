@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Button from "../Button/Button"
 import styles from "./Header.module.css"
+import Drawer from "../Drawer/Drawer"
 
 interface NavItem {
   name: string
@@ -88,6 +89,7 @@ const Header = () => {
         </nav>
         <Button disableAnimation={true}>Make appointment</Button>
       </div>
+      <Drawer />
     </header>
   )
 }
