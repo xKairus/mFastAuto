@@ -11,7 +11,7 @@ import {
 import styles from "./KnownFor.module.css"
 import { useRef } from "react"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
-import { fadeIn, scaleUp } from "../../utils/animations"
+import { scaleUp } from "../../utils/animations"
 
 export default function KnownFor() {
   const ref = useRef<HTMLDivElement>(null)
