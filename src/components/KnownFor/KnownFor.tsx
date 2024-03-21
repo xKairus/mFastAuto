@@ -11,7 +11,7 @@ import {
 import styles from "./KnownFor.module.css"
 import { useRef } from "react"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
-import { scaleUp } from "../../utils/animations"
+import { scaleUp } from "./../../utils/animations"
 
 export default function KnownFor() {
   const ref = useRef<HTMLDivElement>(null)
@@ -22,7 +22,7 @@ export default function KnownFor() {
       <div className={styles.header}>
         <SectionHeader {...sectionHeaders.knownFor} />
       </div>
-      <div className={styles.cards} >
+      <div className={styles.cards}>
         <div className={styles.card} style={scaleUp(isAnimated)}>
           <FontAwesomeIcon
             className={styles.faicon}
