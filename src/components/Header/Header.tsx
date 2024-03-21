@@ -19,6 +19,15 @@ const nav: NavItem[] = [
 
 const Header = () => {
   const [activeId, setActiveId] = useState<string>("Home")
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+
+  const openDrawer = () => {
+    setIsDrawerOpen(true)
+  }
+
+  const closeDrawer = () => {
+    setIsDrawerOpen(false)
+  }
 
   const handleScroll = () => {
     const sections = nav.map((item) => document.getElementById(item.href))
@@ -87,9 +96,11 @@ const Header = () => {
             </div>
           ))}
         </nav>
-        <Button disableAnimation={true}>Make appointment</Button>
+        <Button onClick={openDrawer} disableAnimation={true}>
+          Make appointment
+        </Button>
       </div>
-      <Drawer />
+      <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} />
     </header>
   )
 }

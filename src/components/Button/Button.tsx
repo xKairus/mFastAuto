@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode, useRef } from "react"
 import styles from "./Button.module.css"
-import { fadeIn, scaleUp } from "../../utils/animations"
+import { scaleUp } from "../../utils/animations"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
 
 interface BtnProps extends ButtonHTMLAttributes<HTMLButtonElement> {
