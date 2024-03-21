@@ -1,73 +1,28 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Button from "../Button/Button"
 import styles from "./Header.module.css"
 import Drawer from "../Drawer/Drawer"
-
-interface NavItem {
-  name: string
-  href: string
-}
-
-const nav: NavItem[] = [
-  { name: "Home", href: "Home" },
-  { name: "About Us", href: "About" },
-  { name: "Service", href: "Service" },
-  { name: "Pricing", href: "Pricing" },
-  { name: "Contact Us", href: "Contact" },
-  { name: "Directions", href: "Directions" },
-]
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
+import Nav from "../Nav/Nav"
 
 const Header = () => {
-  const [activeId, setActiveId] = useState<string>("Home")
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+  const [isNavOpen, setIsNavOpen] = useState(false)
 
-  const openDrawer = () => {
-    setIsDrawerOpen(true)
-  }
-
-  const closeDrawer = () => {
-    setIsDrawerOpen(false)
-  }
-
-  const handleScroll = () => {
-    const sections = nav.map((item) => document.getElementById(item.href))
-    const offsets = sections.map((section) =>
-      section
-        ? section.offsetTop - document.querySelector(".header")!.clientHeight
-        : 0
-    )
-
-    const isEndReached =
-      window.innerHeight + window.pageYOffset >= document.body.offsetHeight
-
-    const activeIndex = offsets.findIndex(
-      (offset, index) =>
-        window.pageYOffset >= offset &&
-        (!offsets[index + 1] || window.pageYOffset < offsets[index + 1])
-    )
-
-    if (isEndReached) {
-      setActiveId(nav[nav.length - 1].href)
-    } else if (activeIndex > -1 && nav[activeIndex]) {
-      setActiveId(nav[activeIndex].href)
+  const openComponent = (component: string) => {
+    if (component === "nav") {
+      setIsNavOpen(true)
+    } else if (component === "drawer") {
+      setIsDrawerOpen(true)
     }
   }
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  const handleClick = (href: string) => {
-    const section = document.getElementById(href)
-    if (section) {
-      const headerOffset = document.querySelector(".header")!.clientHeight
-      const sectionTop = section.offsetTop - headerOffset
-
-      window.scrollTo({
-        top: sectionTop,
-        behavior: "smooth",
-      })
+  const closeComponent = (component: string) => {
+    if (component === "nav") {
+      setIsNavOpen(false)
+    } else if (component === "drawer") {
+      setIsDrawerOpen(false)
     }
   }
 
@@ -77,30 +32,18 @@ const Header = () => {
         <span className={styles.logo}>
           <a href="#Home">M FAST AUTO</a>
         </span>
-        <nav className={styles.nav}>
-          {nav.map((item) => (
-            <div
-              className={styles.link_wrapper}
-              key={item.name}
-              onClick={(e) => {
-                e.preventDefault()
-                handleClick(item.href)
-              }}
-            >
-              <a
-                className={activeId === item.href ? styles.active : ""}
-                href={`#${item.href}`}
-              >
-                {item.name}
-              </a>
-            </div>
-          ))}
-        </nav>
-        <Button onClick={openDrawer} disableAnimation={true}>
+        <Nav isOpen={isNavOpen} onClose={() => closeComponent("nav")} />
+        <Button onClick={() => openComponent("drawer")} disableAnimation={true}>
           Make appointment
         </Button>
+        <FontAwesomeIcon
+          onClick={() => openComponent("nav")}
+          className={styles.bars}
+          icon={faBars}
+          style={{ color: "#1e266d" }}
+        />
       </div>
-      <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} />
+      <Drawer isOpen={isDrawerOpen} onClose={() => closeComponent("drawer")} />
     </header>
   )
 }
