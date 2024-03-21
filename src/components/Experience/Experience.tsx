@@ -5,13 +5,20 @@ import { sectionHeaders, expCards } from "../../data/typography"
 import styles from "./Experience.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"
-import { fadeIn, moveRight, scaleUp } from "../../utils/animations"
+import { moveRight, scaleUp } from "../../utils/animations"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
 import { useRef } from "react"
 
 export default function Experience() {
   const ref = useRef<HTMLDivElement>(null)
   const isAnimated = useScrollAnimation(ref)
+
+  const scrollToService = () => {
+    const serviceElement = document.getElementById("Service")
+    if (serviceElement) {
+      serviceElement.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   return (
     <section className={styles.experience} ref={ref}>
@@ -49,7 +56,7 @@ export default function Experience() {
               <span>Dedicated to service</span>
             </li>
           </ul>
-          <Button>Learn More</Button>
+          <Button onClick={scrollToService}>Learn More</Button>
         </div>
         <div className={styles.cards}>
           {expCards.map((card, index) => (
